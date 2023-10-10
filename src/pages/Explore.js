@@ -1,12 +1,11 @@
-// pages/Home.js
+// pages/Explore.js
 import React, { useEffect, useState }  from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../styles/Home.css';
-import { useHistory } from 'react-router-dom';
+import '../styles/Explore.css';
 
-function Home() {
-  const history = useHistory();
+function Explore() {
+
   const backgroundImages = [
     'url("https://images.pexels.com/photos/1634278/pexels-photo-1634278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
     'url("https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
@@ -53,11 +52,7 @@ function Home() {
   }, []);
 
   const handleSelectChange = event => {
-    const selectedCity = event.target.value;
-    setSelectedOption(selectedCity);
-
-    // Reindirizza l'utente alla nuova pagina con il parametro nella query string
-    history.push(`/explore?city=${selectedCity}`);
+    setSelectedOption(event.target.value);
   };
 
   return (
@@ -83,7 +78,7 @@ function Home() {
                     <div className='main-CTA-title'>
                       myvibe.is/
                     </div>
-                    <select class="form-select main-CTA-select" onChange={handleSelectChange}>
+                    <select class="form-select main-CTA-select" aria-label="Default select example">
                       <option selected>Select city</option>
                       {options.map(option => (
                         <option key={option.city_id} value={option.city_name}>
@@ -345,4 +340,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Explore;

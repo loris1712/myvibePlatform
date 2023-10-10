@@ -1,11 +1,31 @@
 // pages/Home.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Header.css';
 
 function Header() {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollY = window.scrollY;
+      if (scrollY > 100) {
+        setIsActive(true);
+      } else {
+        setIsActive(false);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup dell'event listener quando il componente viene smontato
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className='header'>
-      <nav className="navbar navbar-expand-lg fixed-top desktop">
+      <nav className={`navbar navbar-expand-lg fixed-top desktop ${isActive ? 'active_background' : ''}`}>
         <div className="container-fluid">
             <div className='navbar-logo-div'>
               <img src="../../logotransparent.png" class="img-fluid navbar-logo" alt="Myvibe" />
@@ -24,13 +44,13 @@ function Header() {
                     <a className="nav-link" href="#welcome">Welcome</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#about">About</a>
+                    <a className="nav-link" href="#features">Features</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#features">Features</a>
+                    <a className="nav-link" aria-current="page" href="#howitworks">How it works</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#explore">Explore</a>
+                    <a className="nav-link" href="/explore">Explore</a>
                 </li>
             </ul>
             {/*<button className="btn btn-secondary btn-login" type="submit">Explore</button>*/}
@@ -39,7 +59,7 @@ function Header() {
         </div>
       </nav>
 
-      <nav className="navbar navbar-expand-lg fixed-top mobile">
+      <nav className={`navbar navbar-expand-lg fixed-top mobile ${isActive ? 'active_background' : ''}`}>
         <div className="container-fluid">
             <a className="navbar-brand navbar-button" href="#">Explore</a>
             <a className="navbar-brand" href="#">myvibe</a>
@@ -53,19 +73,19 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link nav-link2 active" aria-current="page" href="#services">Services <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2 active" aria-current="page" href="#services">Welcome <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="#steps">How it works <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="#features">Features <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="#pricing">Pricing <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="#howitworks">How it works <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="#testimonials">Testimonials <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/explore">Explore <p className="nav-link-span">&lt;</p></a>
                 </li>
             </ul>
-            <button className="btn btn-primary btn-create" type="submit">Create an account</button>
+            <button className="btn btn-primary btn-create" type="submit">Download App</button>
             </div>
         </div>
       </nav>

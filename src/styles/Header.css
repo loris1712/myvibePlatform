@@ -1,4 +1,8 @@
 .navbar{
+    transition: height 0.3s ease-out;
+}
+
+.navbar.active_background{
     background: #000000;
 }
 
@@ -37,6 +41,10 @@
     letter-spacing: 1px;
 }
 
+.nav-item .nav-link:focus{
+    color: #17d8c1 !important;
+}
+
 .nav-item .nav-link:hover{
     color: #17d8c1 !important;
 }
@@ -73,14 +81,13 @@
     }
 
     .navbar-collapse{
-        background: #fff !important;
+        background: #000 !important;
         border-radius: 20px !important;
         padding: 2rem;
-        margin-top: 1rem;
     }
 
     .nav-link2{
-        color: #000 !important;
+        color: #fff !important;
         font-size: 18px !important;
         font-weight: 600 !important;
         display: flex !important;
