@@ -56,7 +56,7 @@ function Home() {
                 <div className='title'>
                   <h3><span>Filter</span> by</h3>
                 </div>
-                <div className='description w--30'>
+                <div className='description'>
                   Search spots around you filtered by multiple options to find the right match based on your decision.
                 </div>
                 <div className='display-flex'>
@@ -66,7 +66,6 @@ function Home() {
                     </div>
                     <h5>Real Views, Real Users</h5>
                     <p>We drive Real Views and Real Users from YouTube to your videos.</p>
-                    <button className="btn btn-primary btn-service" type="submit">Start a Campaign &gt;</button>
                   </div>
                   <div className='service-card transition'>
                     <div className='icon'>
@@ -74,7 +73,6 @@ function Home() {
                     </div>
                     <h5>Transparent Reporting</h5>
                     <p>All views purchased show up in your YouTube Analytics as "YouTube Advertising”.</p>
-                    <button className="btn btn-primary btn-service" type="submit">Start a Campaign &gt;</button>
                   </div>
                   <div className='service-card transition'>
                     <div className='icon'>
@@ -82,7 +80,6 @@ function Home() {
                     </div>
                     <h5>Payment Guarantee</h5>
                     <p>You pay only for views that we deliver. Any undelivered views are refunded.</p>
-                    <button className="btn btn-primary btn-service" type="submit">Start a Campaign &gt;</button>
                   </div>
                 </div>
               </div>
@@ -100,7 +97,22 @@ function Home() {
             </div>
           </div>
           <div className="row align-items-start home-section build-your-campaing" id="steps">
-            
+            <div className='title'>
+              <h3>Explore <span>spots around you</span></h3>
+            </div>
+            <div className='row align-items-start'>
+              <div className='col'>
+
+              </div>
+
+              <div className='col' style={{textAlign: 'center'}}>
+              <img src="../../images/explorepage.png" class="img-fluid screenpage" alt="Explore Page" />
+              </div>
+
+              <div className='col'>
+                
+              </div>
+            </div>
           </div>
           <div className="row align-items-start home-section" id="pricing">
             

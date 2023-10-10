@@ -9,7 +9,7 @@ function Header() {
         <div className="container-fluid">
             <div className='navbar-logo-div'>
               <img src="../../logotransparent.png" class="img-fluid navbar-logo" alt="Myvibe" />
-              <a className="navbar-brand" href="#">myvibe</a>
+              <a className="navbar-brand" href="/">myvibe</a>
             </div>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="svg-icon">
@@ -41,8 +41,8 @@ function Header() {
 
       <nav className="navbar navbar-expand-lg fixed-top mobile">
         <div className="container-fluid">
-            <a className="navbar-brand navbar-button" href="#">Login</a>
-            <a className="navbar-brand" href="#">Viewster</a>
+            <a className="navbar-brand navbar-button" href="#">Explore</a>
+            <a className="navbar-brand" href="#">myvibe</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="svg-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" className="bi bi-menu-app" viewBox="0 0 16 16">
