@@ -30,8 +30,8 @@ function Home() {
     <div>
       <Header />
         <div className='home-container'>
-          <div className="row align-items-start first-section">
-              <div className="col first-section-left">
+          <div className="first-section">
+              <div className="first-section-left">
                 <div className='subtitle'>
                   <h4>Beta v1.0</h4>
                 </div>
@@ -46,9 +46,6 @@ function Home() {
                   <button className="btn btn-primary btn-start" type="submit">Explore</button>
                   <button className="btn btn-secondary btn-login" type="submit">Download app</button>
                 </div>
-              </div>
-              <div className="col">
-                <img src="../../increaseimage.png" class="img-fluid" alt="..." />
               </div>
           </div>
           <div className="row align-items-start home-section" id="services">
@@ -100,22 +97,65 @@ function Home() {
             <div className='title'>
               <h3>Explore <span>spots around you</span></h3>
             </div>
-            <div className='row align-items-start'>
+            <div className='row align-items-start device-section desktop'>
               <div className='col'>
+                  <div className='description-device transition'>
+                    <p>Use filters on the top <br></br><span className='span'>to customize</span> <br></br>your search.</p>
+                  </div>
 
+                  <div className='description-device transition' style={{marginTop: '35rem'}}>
+                    <p>Navigate to 
+                      <br></br><span className='span'>Home</span> to search by <br></br>multiple categories.
+                    </p>
+                  </div>
               </div>
 
               <div className='col' style={{textAlign: 'center'}}>
-              <img src="../../images/explorepage.png" class="img-fluid screenpage" alt="Explore Page" />
+                <img src="../../images/explorepage.png" class="img-fluid screenpage transition" alt="Explore Page" />
               </div>
 
               <div className='col'>
-                
+
+                  <div className='description-device transition' style={{marginTop: '5rem'}}>
+                    <img src="../../images/pinMaker.png" class="img-fluid" alt="..." />
+                    <p>Click on 
+                      <br></br><span className='span'>myvibe icon</span> on the map <br></br>to open the place.
+                    </p>
+                  </div>
+
+                  <div className='description-device transition' style={{marginTop: '20rem'}}>
+                    <p>Navigate to 
+                      <br></br><span className='span'>Explore</span> to see what is happening <br></br>around you.
+                    </p>
+                  </div>
               </div>
             </div>
-          </div>
-          <div className="row align-items-start home-section" id="pricing">
-            
+
+            <div className='row align-items-start device-section mobile'>
+              <img src="../../images/explorepage.png" class="img-fluid screenpage transition" alt="Explore Page" />
+                  <div className='description-device transition'>
+                    <p>Use filters on the top <br></br><span className='span'>to customize</span> your search.</p>
+                  </div>
+
+                  <div className='description-device transition'>
+                    <p>Navigate to 
+                      <br></br><span className='span'>Home</span> to search by multiple categories.
+                    </p>
+                  </div>
+
+                  <div className='description-device transition'>
+                    <img src="../../images/pinMaker.png" class="img-fluid" alt="..." />
+                    <p>Click on 
+                      <br></br><span className='span'>myvibe icon</span> on the map to open the place.
+                    </p>
+                  </div>
+
+                  <div className='description-device transition'>
+                    <p>Navigate to 
+                      <br></br><span className='span'>Explore</span> to see what is happening around you.
+                    </p>
+                  </div>
+            </div>
           </div>
           <div className="row align-items-start home-section" id="testimonials">
               <div className="col">
