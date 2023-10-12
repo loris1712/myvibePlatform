@@ -12,9 +12,11 @@ function Footer() {
           <div className='title'>
             Start your <br></br>Nightlife Adventure now
           </div>
-          <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB">
-            <button className="btn btn-primary footer-button" type="submit">Download App</button>
-          </a>
+          <div className='footer-button'>
+            <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB">
+              <button className="btn btn-primary" type="submit">Download App</button>
+            </a>
+          </div>
         </div>
         <div className="footer-second-section">
           <div className="footer-infos">

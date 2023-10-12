@@ -70,7 +70,7 @@ function Header() {
       <nav className={`navbar navbar-expand-lg fixed-top mobile ${isActive ? 'active_background' : ''}`}>
         <div className="container-fluid">
             <a className="navbar-brand navbar-button" href="#">Explore</a>
-            <a className="navbar-brand" href="#">myvibe</a>
+            <a className="navbar-brand" href="/">myvibe</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="svg-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" className="bi bi-menu-app" viewBox="0 0 16 16">
@@ -81,16 +81,24 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link nav-link2 active" aria-current="page" href="/#welcome">Welcome <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2 active" aria-current="page" href="/#welcome">Welcome 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="/#features">Features <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/#features">Features 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="/#howitworks">How it works <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/#howitworks">How it works 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="/explore?city=New York">Explore <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/explore?city=New York">Explore 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                    </a>
                 </li>
             </ul>
             <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB">

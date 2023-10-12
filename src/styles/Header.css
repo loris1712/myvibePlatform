@@ -41,6 +41,10 @@
     letter-spacing: 1px;
 }
 
+.nav-link svg{
+    margin-left: auto;
+}
+
 .nav-item .nav-link:focus{
     color: #17d8c1 !important;
 }
