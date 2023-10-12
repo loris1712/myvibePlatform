@@ -386,6 +386,9 @@
 
     .first-section{
         width: 100%;        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .home-section{
@@ -559,6 +562,9 @@
 @media (max-width: 767px) {
     .first-section{
        width: 100%;
+       background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .home-section{

@@ -7,6 +7,7 @@ function Header() {
 
   useEffect(() => {
     function handleScroll() {
+      
       const scrollY = window.scrollY;
       if (scrollY > 100) {
         setIsActive(true);
@@ -15,7 +16,12 @@ function Header() {
       }
     }
 
-    window.addEventListener('scroll', handleScroll);
+    const currentPath = window.location.pathname;
+    if (currentPath === '/explore') {
+      setIsActive(true);
+    }else{
+      window.addEventListener('scroll', handleScroll);
+    }
 
     // Cleanup dell'event listener quando il componente viene smontato
     return () => {
@@ -41,16 +47,16 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0" style={{marginLeft: 'auto', marginRight: '1rem'}}>
                 <li className="nav-item">
-                    <a className="nav-link" href="#welcome">Welcome</a>
+                    <a className="nav-link" href="/#welcome">Welcome</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#features">Features</a>
+                    <a className="nav-link" href="/#features">Features</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#howitworks">How it works</a>
+                    <a className="nav-link" aria-current="page" href="/#howitworks">How it works</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/explore">Explore</a>
+                    <a className="nav-link" href="/explore?city=New York">Explore</a>
                 </li>
             </ul>
             {/*<button className="btn btn-secondary btn-login" type="submit">Explore</button>*/}
@@ -73,16 +79,16 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link nav-link2 active" aria-current="page" href="#services">Welcome <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2 active" aria-current="page" href="/#welcome">Welcome <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="#features">Features <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/#features">Features <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="#howitworks">How it works <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/#howitworks">How it works <p className="nav-link-span">&lt;</p></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link nav-link2" href="/explore">Explore <p className="nav-link-span">&lt;</p></a>
+                    <a className="nav-link nav-link2" href="/explore?city=New York">Explore <p className="nav-link-span">&lt;</p></a>
                 </li>
             </ul>
             <button className="btn btn-primary btn-create" type="submit">Download App</button>
