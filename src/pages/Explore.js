@@ -209,7 +209,7 @@ function Explore() {
               }
               <div className='profile-cta'>
                <p className='profile-cta-text'>To read more informations, filter places, and share them.</p>
-               <button className="btn btn-primary btn-create btn-cta-place" type="submit">Download App</button>
+               <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB"><button className="btn btn-primary btn-create btn-cta-place" type="submit">Download App</button></a>
               </div>
             </div>
             <div className='places-list'>

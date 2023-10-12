@@ -60,7 +60,9 @@ function Header() {
                 </li>
             </ul>
             {/*<button className="btn btn-secondary btn-login" type="submit">Explore</button>*/}
-            <button className="btn btn-primary" type="submit">Download App</button>
+            <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB">
+              <button className="btn btn-primary" type="submit">Download App</button>
+            </a>
             </div>
         </div>
       </nav>
@@ -91,7 +93,9 @@ function Header() {
                     <a className="nav-link nav-link2" href="/explore?city=New York">Explore <p className="nav-link-span">&lt;</p></a>
                 </li>
             </ul>
-            <button className="btn btn-primary btn-create" type="submit">Download App</button>
+            <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB">
+              <button className="btn btn-primary btn-create" type="submit">Download App</button>
+            </a>
             </div>
         </div>
       </nav>
