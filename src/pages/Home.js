@@ -105,23 +105,24 @@ function Home() {
                 </div>
                 <div className='display-flex'>
                   <div className='service-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 640 512"><path d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176H96V304c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128H544h40 40c8.8 0 16 7.2 16 16V352c0 17.7-14.3 32-32 32H576c-11.8 0-22.2-6.4-27.7-16H463.4c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16H56 96h19.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9 .2 13.2 .6zM544 320V176H496c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1H544zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
+                    <div className='icon' style={{ backgroundImage: '#00ff9a24'}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" fill="#00ff9a" viewBox="0 0 640 512"><path d="M480 48c0-26.5-21.5-48-48-48H336c-26.5 0-48 21.5-48 48V96H224V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V96H112V24c0-13.3-10.7-24-24-24S64 10.7 64 24V96H48C21.5 96 0 117.5 0 144v96V464c0 26.5 21.5 48 48 48H304h32 96H592c26.5 0 48-21.5 48-48V240c0-26.5-21.5-48-48-48H480V48zm96 320v32c0 8.8-7.2 16-16 16H528c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16zM240 416H208c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16zM128 400c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32zM560 256c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H528c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h32zM256 176v32c0 8.8-7.2 16-16 16H208c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16zM112 160c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h32zM256 304c0 8.8-7.2 16-16 16H208c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32zM112 320H80c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16zm304-48v32c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16zM400 64c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16V80c0-8.8 7.2-16 16-16h32zm16 112v32c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16z"/></svg>
                     </div>
                     <h5>Discover Your Perfect Night</h5>
                     <p>Discover the nightlife scene like never before. Tell us your vibe, and we'll match you with the best spots in town.</p>
                   </div>
                   <div className='service-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 512 512"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
-                    </div>
+                    <div className='icon' style={{ backgroundImage: '#00bbff24'}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px"fill="#00bbff" viewBox="0 0 576 512"><path d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3V152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6V503zM15.1 187.3C6 191 0 199.8 0 209.6V480.4c0 17 17.1 28.6 32.9 22.3L160 451.8V200.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77V449.4l192 54.9V255z"/></svg>                   
+                     </div>
                     <h5>Explore Vibrant Cities</h5>
                     <p>Dive into the pulse of cities worldwide. Explore their unique nightlife scenes, one city at a time.</p>
                   </div>
                   <div className='service-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                    <div className='icon' style={{ backgroundImage: '#0007de24'}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" fill="#0007de" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>                    
                     </div>
+                    
                     <h5>Find Your Vibe</h5>
                     <p>Get ready to vibe at your favorite spots and discover new ones. Our advanced matching algorithm will recommend exciting places tailored just for you.</p>
                   </div>
@@ -204,7 +205,7 @@ function Home() {
                   </div>
             </div>
           </div>
-          <div className="row align-items-start home-section" id="testimonials">
+          {/*<div className="row align-items-start home-section" id="testimonials">
               <div className="col">
                 <div className='title'>
                   <h3>Testimonials</h3>
@@ -288,7 +289,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-          </div>
+          </div>*/}
           <div className="row align-items-start home-section">
               <div className="col">
                 <div className='title questions-title'>
@@ -300,25 +301,26 @@ function Home() {
                       <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <div className='icon'>
                         </div>
-                        Question for you?
+                        What is MyVibe?
                       </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        Viewster is an artist-first platform that allows you to promote your music and build your community, Viewster is an artist-first platform that allows you to promote your music and build your community, Viewster is an artist-first platform that allows you to promote your music and build your community, Viewster is an artist-first platform that allows you to promote your music and build your community, Viewster is an artist-first platform that allows you to promote your music and build your community, Viewster is an artist-first platform that allows you to promote your music and build your community.                      </div>
+                        MyVibe is a mobile app designed to enhance your nightlife experiences. It helps you discover the best nightlife spots in your city, tailored to your preferences.
                       </div>
+                    </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <div className='icon'>
                         </div>
-                        Question for you?
+                        How does MyVibe work?
                       </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      MyVibe uses a sophisticated matching algorithm to recommend nightlife locations based on your preferences. Simply answer a few questions about your vibe, and we'll do the rest.
                       </div>
                     </div>
                   </div>
@@ -327,12 +329,152 @@ function Home() {
                       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <div className='icon'>
                         </div>
-                        Question for you?
+                        Is MyVibe available in my city?
                       </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      MyVibe is currently available in several major cities. Check the app to see if your city is listed. We're continuously expanding to new locations!
+                                            </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading4">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                        How can I create an account?
+                      </button>
+                    </h2>
+                    <div id="collapse4" className="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        Download the MyVibe app from the App Store or Google Play. Follow the on-screen instructions to create your account.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading5">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                        Is MyVibe free to use?
+                      </button>
+                    </h2>
+                    <div id="collapse5" className="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        Yes, MyVibe is free to download and use. We will offer premium subscription options with enhanced features in the future, but basic functionality is available to all users at no cost at the moment.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading6">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                        How do I personalize my nightlife recommendations?
+                      </button>
+                    </h2>
+                    <div id="collapse6" className="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                      After creating an account, you'll answer a series of questions about your vibe and preferences. Our algorithm will use this information to suggest relevant locations. As you start using the app, providing your feedback on locations, saving places, and “Checking In” to places, MyVibe will do more to personalize your experiences.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading7">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                        Can I review and rate nightlife spots on MyVibe?
+                      </button>
+                    </h2>
+                    <div id="collapse7" className="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                      Yes, you can! We encourage users to share their experiences by leaving reviews and ratings for the places they visit. Your feedback helps others discover great spots. We are different, however, than other platforms, because we do not show these reviews to the public. We use the information you provide to recommend these spots to other nightlife seekers who may be interested. We also remove locations from our database if we receive overwhelming negative feedback.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading8">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                        How can I contact customer support?
+                      </button>
+                    </h2>
+                    <div id="collapse8" className="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        You can reach our customer support team by tapping the "Support" option in the app's menu. We're here to assist you with any questions or issues.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading9">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                          Is my personal information secure with MyVibe?
+                        </button>
+                    </h2>
+                    <div id="collapse9" className="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        You can reach our customer support team by tapping the "Support" option in the app's menu. We're here to assist you with any questions or issues.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading10">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                          How can nightlife establishments partner with MyVibe?
+                        </button>
+                    </h2>
+                    <div id="collapse10" className="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                      If you own or manage a nightlife establishment, please click on “Submit Your Business” in the app to explore partnership opportunities and benefits.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading11">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                          Can I suggest a new feature or improvement? 
+                        </button>
+                    </h2>
+                    <div id="collapse11" className="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                      Absolutely! We value user feedback. Feel free to send us your suggestions through the app or website, and we'll consider them for future updates.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading12">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                          What should I do if I encounter a bug or technical issue?
+                        </button>
+                    </h2>
+                    <div id="collapse12" className="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        If you encounter any technical issues or bugs, please report them to our support team through the app. We'll work to resolve them promptly.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="heading13">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapseThree">
+                        <div className='icon'>
+                        </div>
+                          What happens to my data if I delete my account?
+                        </button>
+                    </h2>
+                    <div id="collapse13" className="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        When you delete your account, your personal data is deleted from our servers as per our privacy policy. Be sure to back up any important information before doing so.
                       </div>
                     </div>
                   </div>

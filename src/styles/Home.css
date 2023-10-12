@@ -62,10 +62,11 @@
 
 .icon{
     background-color: #2D2D2D;
-    border-radius: 20px;
+    border-radius: 15px;
+    width: -moz-fit-content;
     width: fit-content;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -414,6 +415,10 @@
         width: 33.33%;
         margin-top: 2rem;
         background-color: #131314;
+    }
+
+    .service-card:hover{
+        background-color: #27272b;
     }
 
     .title h1{
