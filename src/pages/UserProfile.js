@@ -1,5 +1,5 @@
-// pages/Explore.js
-import React, { useEffect, useState }  from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Header from '../components/Header';
@@ -9,61 +9,57 @@ import { DivIcon } from 'leaflet';
 import { useLocation } from 'react-router-dom';
 
 function LocationMarker() {
-  const [position, setPosition] = useState(null)
-  const map = useMapEvents({
-    click() {
-      map.locate()
-    },
-    locationfound(e) {
-      setPosition(e.latlng)
-      map.flyTo(e.latlng, map.getZoom())
-    },
-  })
-
-  const customMarker = new DivIcon({
-    className: 'custom-marker', 
-    iconSize: [28, 28], 
-    iconAnchor: [8, 8], 
-  });
-
-  return position === null ? null : (
-    <Marker position={position} icon={customMarker}>
-      <Popup>
-        Where I am now <br />
-      </Popup>
-    </Marker>
-  )
-}
-
-function Explore() {
+    const [position, setPosition] = useState(null)
+    const map = useMapEvents({
+      click() {
+        map.locate()
+      },
+      locationfound(e) {
+        setPosition(e.latlng)
+        map.flyTo(e.latlng, map.getZoom())
+      },
+    })
   
-  const cities = {
-    'Toronto': { lat: 43.651070, lng: -79.347015 },
-    'New York': { lat: 40.712776, lng: -74.005974 },
-    'London': { lat: 51.5074, lng: -0.1278 },
-    'Barcelona': { lat: 41.3851, lng: 2.1734 },
-    'Milan': { lat: 45.4642, lng: 9.1900 },
-    'Los Angeles': { lat: 34.0522, lng: -118.2437 },
-    'San Francisco': { lat: 37.7749, lng: -122.4194 },
-    'Dubai': { lat: 25.276987, lng: 55.296249 },
-    'Seattle': { lat: 47.6062, lng: -122.3321 },
-    'Miami': { lat: 25.7617, lng: -80.1918 },
-    'Chicago': { lat: 41.8781, lng: -87.6298 },
-  };
+    const customMarker = new DivIcon({
+      className: 'custom-marker', 
+      iconSize: [28, 28], 
+      iconAnchor: [8, 8], 
+    });
+  
+    return position === null ? null : (
+      <Marker position={position} icon={customMarker}>
+        <Popup>
+        I am not here but there is a beautiful sea! <br />
+        </Popup>
+      </Marker>
+    )
+}
+  
+function UserProfile() {
+    const cities = {
+        'Toronto': { lat: 43.651070, lng: -79.347015 },
+        'New York': { lat: 40.712776, lng: -74.005974 },
+        'London': { lat: 51.5074, lng: -0.1278 },
+        'Barcelona': { lat: 41.3851, lng: 2.1734 },
+        'Milan': { lat: 45.4642, lng: 9.1900 },
+        'Los Angeles': { lat: 34.0522, lng: -118.2437 },
+        'San Francisco': { lat: 37.7749, lng: -122.4194 },
+        'Dubai': { lat: 25.276987, lng: 55.296249 },
+        'Seattle': { lat: 47.6062, lng: -122.3321 },
+        'Miami': { lat: 25.7617, lng: -80.1918 },
+        'Chicago': { lat: 41.8781, lng: -87.6298 },
+      };
 
-  let position = [];
+  const { nickname } = useParams();
+  const [userData, setUserData] = useState(null);
+
+  let position = [0, 0];
   const [places, setPlaces] = useState([]);
   const [place, setPlace] = useState([]);
+  const [user, setUser] = useState([]);
   const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const city = queryParams.get('city');
-
-  const coordinates = cities[city];
-  if (coordinates) {
-    const { lat, lng } = coordinates;
-    position = [lat, lng];
-  }
 
   const customMarker = new DivIcon({
     className: 'custom-marker', 
@@ -78,7 +74,7 @@ function Explore() {
   });
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/allPlaces?cityName='+ city)
+    fetch('https://myvibe-backend.vercel.app/api/getPlaces?public=true&userId=' + nickname)
       .then(response => response.json())
       .then(data => {
         if(data.length > 0){
@@ -88,7 +84,22 @@ function Explore() {
       .catch(error => {
         console.error('Error calling API:', error);
       });
-  }, [city]);
+
+      fetch('https://myvibe-backend.vercel.app/users/user?uid=' + nickname)
+      .then(response => response.json())
+      .then(data => {
+        if(data.length > 0){
+            setUser(data);
+        }
+      })
+      .catch(error => {
+        console.error('Error calling API:', error);
+      });
+  }, [nickname]);
+
+  if (!places) {
+    return <div>Loading...</div>;
+  }
 
   function reduceSidebar() {
     const sidebar = document.getElementById('sidebarPlaces');
@@ -132,7 +143,7 @@ function Explore() {
     <div>
       <Header />
         <div className='map-container'>
-          <MapContainer center={position} zoom={13} className='map-component'>
+          <MapContainer center={position} zoom={2} className='map-component'>
             <TileLayer
               url="https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
               attribution='&copy; <a href="https://carto.com/">Carto</a> contributors'
@@ -168,6 +179,14 @@ function Explore() {
                 Find your position
               </p>
             </div>
+
+            <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB" target="_blank">
+              <div className='list-title'>
+                <p>
+                  Favorite list of {user && user[0]?.fullname ? user[0].fullname : (user && user[0] ? user[0].first_name + ' ' + user[0].last_name : 'Loading...')}
+                </p>
+              </div>
+            </a>
           </MapContainer>
 
           <div className='open-sidebar' onClick={() => openSidebar()} id="open-sidebar">
@@ -183,11 +202,11 @@ function Explore() {
               </span>
             </div>
             <div className='place-profile' id='place-profile'>
-            <div className='close-profile' onClick={() => closeProfile()} id="close-profile">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </span>
-            </div>
+                <div className='close-profile' onClick={() => closeProfile()} id="close-profile">
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16px" fill="white" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    </span>
+                </div>
             {place
                 && (
                   <div className='place-profile-container'>
@@ -213,6 +232,11 @@ function Explore() {
               </div>
             </div>
             <div className='places-list'>
+            <div className='sidebar-title'>
+              Favorite list of <span>{user && user[0]?.fullname ? user[0].fullname : (user && user[0] ? user[0].first_name + ' ' + user[0].last_name : 'Loading...')}</span>
+            </div>
+
+                
               {places.map((place, index) => {
                 return (
                   <div className='place' key={index} onClick={() => showPlaceProfile(place)}>
@@ -239,5 +263,4 @@ function Explore() {
   );
 }
 
-export default Explore;
-
+export default UserProfile;

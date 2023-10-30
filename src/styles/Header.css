@@ -1,9 +1,10 @@
 .navbar{
     transition: height 0.3s ease-out;
+    background: #000000 !important;
 }
 
 .navbar.active_background{
-    background: #000000;
+    background: #000000 !important;
 }
 
 .navbar-toggler:focus {

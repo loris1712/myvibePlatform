@@ -104,9 +104,9 @@
 .vertical-hr{
     height: 45vh;
     width: 5px;
-    background: #7474BF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #1B1B1B, #00FFA3, #1B1B1B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #1B1B1B, #00FFA3, #1B1B1B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #7474BF;
+    background: -webkit-linear-gradient(to bottom, #1B1B1B, #00FFA3, #1B1B1B);
+    background: linear-gradient(to bottom, #1B1B1B, #00FFA3, #1B1B1B);
     margin-left: 0.8rem;
 }
 
@@ -349,8 +349,8 @@
     content: "+";
     font-size: 40px;
     display: inline-block;
-    margin-right: 5px; /* Aggiungi margine per spaziare il simbolo dal testo */
-    transition: transform 0.3s ease; /* Aggiungi un'animazione di transizione */
+    margin-right: 5px; 
+    transition: transform 0.3s ease;
     color: #17d8c1;
   }
 
@@ -358,8 +358,8 @@
     content: "-";
     font-size: 40px;
     display: inline-block;
-    margin-right: 5px; /* Aggiungi margine per spaziare il simbolo dal testo */
-    transition: transform 0.3s ease; /* Aggiungi un'animazione di transizione */
+    margin-right: 5px; 
+    transition: transform 0.3s ease; 
     color: #fff;
   }
 
@@ -456,9 +456,9 @@
         border-radius: 20px;
         width: 33.33%;
         margin-top: 2rem;
-        background: #7474BF;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #78F3E7, #83C5FE);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #78F3E7, #83C5FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #7474BF;
+        background: -webkit-linear-gradient(to right, #78F3E7, #83C5FE); 
+        background: linear-gradient(to right, #78F3E7, #83C5FE); 
     }
 
     .testimonial-card{
@@ -479,7 +479,6 @@
     }
 
     .screenpage{
-        /*width: 45% !important;*/
         margin-left: auto;
         margin-right: auto;
     }
@@ -550,7 +549,7 @@
       }
       
       .main-CTA-select::after {
-        content: '\25BC'; /* Freccia verso il basso */
+        content: '\25BC';
         position: absolute;
         top: 50%;
         right: 10px;
@@ -559,7 +558,6 @@
         font-weight: bold;
       }
       
-      /* Aggiungi questa regola per impostare il colore del testo all'interno del dropdown su bianco */
       .main-CTA-select option {
         color: white;
         background-color: rgba(0, 0, 0, 1);
@@ -657,9 +655,9 @@
         border-radius: 20px;
         width: 100%;
         margin-top: 2rem;
-        background: #7474BF;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #78F3E7, #83C5FE);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #78F3E7, #83C5FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #7474BF;
+        background: -webkit-linear-gradient(to right, #78F3E7, #83C5FE);
+        background: linear-gradient(to right, #78F3E7, #83C5FE);
     }
 
     .testimonials-section{
@@ -753,7 +751,7 @@
       }
       
       .main-CTA-select::after {
-        content: '\25BC'; /* Freccia verso il basso */
+        content: '\25BC';
         position: absolute;
         top: 50%;
         right: 10px;
@@ -762,7 +760,6 @@
         font-weight: bold;
       }
       
-      /* Aggiungi questa regola per impostare il colore del testo all'interno del dropdown su bianco */
       .main-CTA-select option {
         color: white;
         background-color: rgba(0, 0, 0, 1);

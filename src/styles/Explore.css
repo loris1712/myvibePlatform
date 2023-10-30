@@ -43,9 +43,36 @@
     line-height: 12px;
     margin-left: 0.5rem;
   }
+
+  .list-title p{
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
   
 /*Desktop*/
 @media (min-width: 1025px) {
+
+    .list-title{
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        background: #007991;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #08d899, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #08d899, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        z-index: 1000;
+        width: 100vw;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+    }
 
     .your-position{
         position: absolute;
@@ -67,13 +94,13 @@
       .sidebar-places{
         background-color: black;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    position: absolute;
-    right: 1%;
-    top: 4%;
-    z-index: 1000;
-    width: 65vh;
-    height: 94%;
-    border-radius: 15px;
+        position: absolute;
+        right: 1%;
+        top: 4%;
+        z-index: 1000;
+        width: 65vh;
+        height: 94%;
+        border-radius: 15px;
       }
 
       .sidebar-places .places-list{
@@ -235,14 +262,43 @@
         font-size: 14px;
         font-weight: 600;
         width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
       }
 
+      .sidebar-title{
+        color: #fff;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .sidebar-title span{
+        color:#17d8c1;
+      }
 }
 
 /*Mobile*/
 @media (max-width: 767px) {
+
+  .list-title{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background: #007991;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #08d899, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #08d899, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 1000;
+    width: 100vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
 
     .your-position{
         position: absolute;
@@ -443,6 +499,19 @@
 
       .btn-cta-place{
         margin-top: 0 !important;
+      }
+
+      .sidebar-title{
+        color: #fff;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .sidebar-title span{
+        color:#17d8c1;
       }
 
 }
