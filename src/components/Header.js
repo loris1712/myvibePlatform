@@ -32,7 +32,7 @@ function Header() {
     <div className='header fixed-top'>
       <div className='header-announcement'>
         <div className='header-announcement-container'>
-          Welcome to the new MyVibe Beta version 1.1.14
+          Welcome to the new MyVibe Beta version 1.1.4
         </div>
       </div>
       <nav className={`navbar navbar-expand-lg desktop ${isActive ? 'active_background' : ''}`}>
