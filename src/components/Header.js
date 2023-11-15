@@ -23,18 +23,22 @@ function Header() {
       window.addEventListener('scroll', handleScroll);
     }
 
-    // Cleanup dell'event listener quando il componente viene smontato
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div className='header'>
-      <nav className={`navbar navbar-expand-lg fixed-top desktop ${isActive ? 'active_background' : ''}`}>
+    <div className='header fixed-top'>
+      <div className='header-announcement'>
+        <div className='header-announcement-container'>
+          Welcome to the new MyVibe Beta version 1.1.14
+        </div>
+      </div>
+      <nav className={`navbar navbar-expand-lg desktop ${isActive ? 'active_background' : ''}`}>
         <div className="container-fluid">
             <div className='navbar-logo-div'>
-              <img src="../../logotransparent.png" class="img-fluid navbar-logo" alt="Myvibe" />
+              <img src="../../logotransparent.png" className="img-fluid navbar-logo" alt="Myvibe" />
               <a className="navbar-brand" href="/">myvibe</a>
             </div>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +63,7 @@ function Header() {
                     <a className="nav-link" href="/explore?city=New York">Explore</a>
                 </li>
             </ul>
-            {/*<button className="btn btn-secondary btn-login" type="submit">Explore</button>*/}
+            
             <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB" target="_blank">
               <button className="btn btn-primary" type="submit">Download App</button>
             </a>
@@ -67,7 +71,7 @@ function Header() {
         </div>
       </nav>
 
-      <nav className={`navbar navbar-expand-lg fixed-top mobile ${isActive ? 'active_background' : ''}`}>
+      <nav className={`navbar navbar-expand-lg mobile ${isActive ? 'active_background' : ''}`}>
         <div className="container-fluid">
             <a className="navbar-brand" href="/">myvibe</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +106,7 @@ function Header() {
             <a href="https://apps.apple.com/it/app/myvibe-is/id6456566019?l=en-GB" target="_blank">
               <button className="btn btn-primary btn-create" type="submit">Download App</button>
             </a>
-            <a class="navbar-brand navbar-button navbar-button-mobile" href="/explore?city=New York">Explore</a>
+            <a className="navbar-brand navbar-button navbar-button-mobile" href="/explore?city=New York">Explore</a>
             </div>
         </div>
       </nav>

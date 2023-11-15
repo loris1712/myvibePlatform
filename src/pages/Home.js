@@ -56,7 +56,6 @@ function Home() {
     const selectedCity = event.target.value;
     setSelectedOption(selectedCity);
 
-    // Reindirizza l'utente alla nuova pagina con il parametro nella query string
     history.push(`/explore?city=${selectedCity}`);
   };
 
@@ -67,7 +66,7 @@ function Home() {
           <div className="first-section" id="welcome">
               <div className="first-section-left">
                 <div className='subtitle'>
-                  <h4>Beta v1.0</h4>
+                  <h4>Beta v1.1.14</h4>
                 </div>
                 <div className='title'>
                   <h1>Discover your</h1>
@@ -83,7 +82,7 @@ function Home() {
                     <div className='main-CTA-title'>
                       myvibe.is/
                     </div>
-                    <select class="form-select main-CTA-select" onChange={handleSelectChange}>
+                    <select className="form-select main-CTA-select" onChange={handleSelectChange}>
                       <option selected>Select city</option>
                       {options.map(option => (
                         <option key={option.city_id} value={option.city_name}>
@@ -159,13 +158,13 @@ function Home() {
               </div>
 
               <div className='col' style={{textAlign: 'center'}}>
-                <img src="../../images/explorepage.png" class="img-fluid screenpage transition" alt="Explore Page" />
+                <img src="../../images/explorepage.png" className="img-fluid screenpage transition" alt="Explore Page" />
               </div>
 
               <div className='col'>
 
                   <div className='description-device transition' style={{marginTop: '5rem'}}>
-                    <img src="../../images/pinMaker.png" class="img-fluid" alt="..." />
+                    <img src="../../images/pinMaker.png" className="img-fluid" alt="..." />
                     <p>Click on 
                       <br></br><span className='span'>myvibe icon</span> on the map <br></br>to open the place.
                     </p>
@@ -180,7 +179,7 @@ function Home() {
             </div>
 
             <div className='row align-items-start device-section mobile'>
-              <img src="../../images/explorepage.png" class="img-fluid screenpage transition" alt="Explore Page" />
+              <img src="../../images/explorepage.png" className="img-fluid screenpage transition" alt="Explore Page" />
                   <div className='description-device transition'>
                     <p>Use filters on the top <br></br><span className='span'>to customize</span> your search.</p>
                   </div>
@@ -192,7 +191,7 @@ function Home() {
                   </div>
 
                   <div className='description-device transition'>
-                    <img src="../../images/pinMaker.png" class="img-fluid" alt="..." />
+                    <img src="../../images/pinMaker.png" className="img-fluid" alt="..." />
                     <p>Click on 
                       <br></br><span className='span'>myvibe icon</span> on the map to open the place.
                     </p>
@@ -205,91 +204,6 @@ function Home() {
                   </div>
             </div>
           </div>
-          {/*<div className="row align-items-start home-section" id="testimonials">
-              <div className="col">
-                <div className='title'>
-                  <h3>Testimonials</h3>
-                </div>
-                <div className='display-flex testimonials-section'>
-                  <div className='testimonial-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    </div>
-                    <p>Dolor sit amet, consectetur adipiscing elit. Enim tempus mattis facilisis massa tincidunt tortor gravida. Accumsan hac a non congue maecenas tellus vel odio varius. Sed posuere.</p>
-                    <div className='author'>
-                      <div className='author-image'>
-                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" className="img-thumbnail" alt="..." />
-                      </div>
-                      <div className='author-information'>
-                        <div className='author-name'>
-                          Jon Asterious
-                        </div>
-                        <div className='author-role'>
-                          COO of Art
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='testimonial-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    </div>
-                    <p>Dolor sit amet, consectetur adipiscing elit. Enim tempus mattis facilisis massa tincidunt tortor gravida. Accumsan hac a non congue maecenas tellus vel odio varius. Sed posuere.</p>
-                    <div className='author'>
-                      <div className='author-image'>
-                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" className="img-thumbnail" alt="..." />
-                      </div>
-                      <div className='author-information'>
-                        <div className='author-name'>
-                          Jon Asterious
-                        </div>
-                        <div className='author-role'>
-                          COO of Art
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='testimonial-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    </div>
-                    <p>Dolor sit amet, consectetur adipiscing elit. Enim tempus mattis facilisis massa tincidunt tortor gravida. Accumsan hac a non congue maecenas tellus vel odio varius. Sed posuere.</p>
-                    <div className='author'>
-                      <div className='author-image'>
-                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" className="img-thumbnail" alt="..." />
-                      </div>
-                      <div className='author-information'>
-                        <div className='author-name'>
-                          Jon Asterious
-                        </div>
-                        <div className='author-role'>
-                          COO of Art
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='testimonial-card transition'>
-                    <div className='icon'>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
-                    </div>
-                    <p>Dolor sit amet, consectetur adipiscing elit. Enim tempus mattis facilisis massa tincidunt tortor gravida. Accumsan hac a non congue maecenas tellus vel odio varius. Sed posuere.</p>
-                    <div className='author'>
-                      <div className='author-image'>
-                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" className="img-thumbnail" alt="..." />
-                      </div>
-                      <div className='author-information'>
-                        <div className='author-name'>
-                          Jon Asterious
-                        </div>
-                        <div className='author-role'>
-                          COO of Art
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>*/}
           <div className="row align-items-start home-section">
               <div className="col">
                 <div className='title questions-title'>

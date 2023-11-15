@@ -1,3 +1,12 @@
+@keyframes slideBackground {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
 .navbar{
     transition: height 0.3s ease-out;
     background: #000000 !important;
@@ -63,6 +72,20 @@
     display: inherit;
     text-align: center;
     margin-top: 1rem;
+}
+
+.header-announcement{
+    width: 100%;
+    background: linear-gradient(to right, #78ffd6, #007991, #FF6B6B, #FFD93D);
+    background-size: 400% 100%;
+    animation: slideBackground 8s ease infinite;
+}
+
+.header-announcement-container{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
 }
 
 /*Desktop*/

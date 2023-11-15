@@ -1,0 +1,439 @@
+@keyframes slideBackground {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+.plan-container{
+    background: #1e130c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #19FA8E, #11111100, #11111100);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #19fa8da8, #11111100, #11111100); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.popup {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+
+  .popup-close{
+    padding: 0.5rem 0.8rem;
+    border-radius: 100px;
+    background: rgba(19,21,23,0.08);
+    width: fit-content;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .plan-call-to-action-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .popup-inner form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .popup-inner input[type='email'] {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .popup-inner button[type='submit'] {
+    background-color: #111111;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+/*Desktop*/
+@media (min-width: 1025px) {
+    .popup-inner {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        width: 35vw;
+        max-width: 80%;
+      }
+
+      .popup-title{
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 600;
+        color: black;
+      }
+    
+      .popup-subtitle{
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        margin-top: 1rem;
+        color: black;
+        margin-bottom: 1rem;
+      }
+
+    .plan-row{
+        display: flex;
+    }
+
+    .plan-col{
+        margin-left: 2rem;
+    }
+
+    .plan-body{
+        padding-top: 10rem;
+        padding-bottom: 15rem;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .plan-image{
+        border-radius: 12px;
+    }
+    
+    .plan-title{
+        font-size: 3rem;
+        font-weight: 700;
+        word-break: break-word;
+        color: #fff;
+    }
+    
+    .plan-date{
+        display: flex;
+        align-items: center;
+    }
+    
+    .plan-date-small-month{
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        padding-top: 0.2rem;
+        font-size: 0.5rem;
+        background: rgba(255, 255, 255, 0.24);
+        text-transform: uppercase;
+        text-align: center;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+    
+    .plan-date-small-day{
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        font-size: 1rem;
+        border:1px solid rgba(255, 255, 255, 0.24);
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: #fff;
+    }
+    
+    .plan-date-normal{
+        margin-left: 1rem;
+        color: #fff;
+    }
+    
+    .plan-address{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        color: #fff;
+    }
+    
+    .plan-address-icon{
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        border-radius: 10px;
+        border:1px solid rgba(232, 232, 232, 0.08);
+    }
+    
+    .plan-call-to-action{
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: rgba(232, 232, 232, 0.08);
+    }
+    
+    .plan-call-to-action-button{
+        padding: 0.5rem 0.75rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: white;
+        text-align: center;
+        color: black;
+    }
+    
+    .plan-stops{
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: rgba(232, 232, 232, 0.08);
+        margin-bottom: 2rem;
+    }
+    
+    .plan-h2{
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    
+    .plan-stop{
+        display: flex;
+    }
+    
+    .plan-stop-order-container{
+        width: 10%;
+    }
+    
+    .plan-stop-order{
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .vertical-line{
+        width: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 5vh;
+        background-color: #fff;
+    }
+    
+    .plan-stop-date{
+        color: rgb(186, 186, 186);
+        font-size: 0.9rem;
+    }
+    
+    .plan-stop-name{
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    
+    .plan-stop-address{
+        color: rgb(186, 186, 186);
+        font-size: 1rem;
+    }
+
+    .plan-p2{
+        color: #fff;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+    .popup-inner {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        width: 85vw;
+        max-width: 80%;
+    }
+
+    .popup-title{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: black;
+      }
+    
+      .popup-subtitle{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        margin-top: 1rem;
+        color: black;
+        margin-bottom: 1rem;
+      }
+
+    .col-4{
+        width: 100% !important;
+    }
+
+    .plan-body{
+        padding-top: 9rem;
+    }
+
+    .col-8{
+        width: 100% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .plan-image-container{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .plan-image{
+        border-radius: 12px;
+        width: 90vw !important;
+    }
+
+    .plan-title{
+        font-size: 3rem;
+        font-weight: 700;
+        word-break: break-word;
+        line-height: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    
+    .plan-date{
+        display: flex;
+        align-items: center;
+    }
+    
+    .plan-date-small-month{
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        padding-top: 0.2rem;
+        font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.24);
+        text-transform: uppercase;
+        text-align: center;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+    
+    .plan-date-small-day{
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        font-size: 1.4rem;
+        border:1px solid rgba(255, 255, 255, 0.24);
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: #fff;
+    }
+    
+    .plan-date-normal{
+        margin-left: 1rem;
+        color: #fff;
+    }
+
+    .plan-p2{
+        color: #fff;
+    }
+    
+    .plan-address{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    
+    .plan-address-icon{
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        border-radius: 10px;
+        border:1px solid rgba(232, 232, 232, 0.18);
+    }
+    
+    .plan-call-to-action{
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: rgba(232, 232, 232, 0.18);
+    }
+    
+    .plan-call-to-action-button{
+        padding: 0.5rem 0.75rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: white;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+    
+    .plan-stops{
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background-color: rgba(232, 232, 232, 0.18);
+        margin-bottom: 2rem;
+    }
+    
+    .plan-h2{
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    
+    .plan-stop{
+        display: flex;
+    }
+    
+    .plan-stop-order-container{
+        width: 10%;
+    }
+    
+    .plan-stop-order{
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .vertical-line{
+        width: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 5vh;
+        background-color: #fff;
+    }
+    
+    .plan-stop-date{
+        color: rgb(186, 186, 186);
+        font-size: 0.9rem;
+    }
+    
+    .plan-stop-name{
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    
+    .plan-stop-address{
+        color: rgb(186, 186, 186);
+        font-size: 1rem;
+    }
+}

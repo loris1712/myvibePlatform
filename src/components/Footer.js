@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer-container'>
         <div className="row align-items-start footer-first-section">
           <div className='footer-logo'>
-            <img src="../../logocompletedverticaltransparent.png" class="img-fluid footer-logo-img" alt="MyVibe" />
+            <img src="../../logocompletedverticaltransparent.png" className="img-fluid footer-logo-img" alt="MyVibe" />
           </div>
           <div className='title'>
             Start your <br></br>Nightlife Adventure now
