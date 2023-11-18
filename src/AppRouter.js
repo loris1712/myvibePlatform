@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import Explore from './pages/Explore';
 import UserProfile from './pages/UserProfile';
 import Plan from './pages/Plan';
+import RouteChangeTracker from './components/RouteChangeTracker';
 
 function AppRouter() {
   return (
     <Router>
+      <RouteChangeTracker />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/plan/:id" component={Plan} />
