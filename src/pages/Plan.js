@@ -173,7 +173,7 @@ function Plan() {
                     </div>
                   </div>
                   <div className='plan-date-normal'>
-                    {formatDate(planData[0]?.date_event)}
+                    {formatDate(planDataStops[0]?.time)}
                   </div>
                 </div>
                 <div className='plan-call-to-action'>
