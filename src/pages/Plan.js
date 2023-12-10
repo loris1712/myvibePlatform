@@ -201,10 +201,10 @@ function Plan() {
                           {formatDate(stop.time)} 
                         </div>
                         <div className='plan-stop-name'>
-                          {stop.name} 
+                          {stop.name && stop.name !== '' ? stop.name : 'Address'} 
                         </div>
                         <div className='plan-stop-address'>
-                          {stop.full_address}
+                          {stop.full_address && stop.full_address !== '' ? stop.full_address : stop.manual_address} 
                         </div>
                       </div>
                     </div>
