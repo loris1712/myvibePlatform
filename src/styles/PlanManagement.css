@@ -160,6 +160,14 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .plan-body-management{
+        padding-top: 10rem;
+        padding-bottom: 15rem;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     .plan-image{
         border-radius: 12px;
@@ -304,23 +312,26 @@
 @media (max-width: 767px) {
     .popup-inner {
         background-color: white;
-        padding: 20px;
-        border-radius: 15px;
-        width: 85vw;
-        max-width: 80%;
+        padding: 30px;
+        border-radius: 0px;
+        max-width: 100% !IMPORTANT;
+        width: 100% !important;
+        height: 100%;
+        padding-top: 10rem;
     }
 
     .popup-title{
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        font-weight: 700;
         color: black;
       }
     
       .popup-subtitle{
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-top: 0.5rem;
+        font-weight: 400;
         color: black;
         margin-bottom: 1rem;
       }
@@ -329,11 +340,11 @@
         width: 100% !important;
     }
 
-    .plan-body{
+    .plan-body-management{
         padding-top: 9rem;
     }
 
-    .col-8{
+    .col-6{
         width: 100% !important;
         padding-left: 1rem;
         padding-right: 1rem;

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Explore from './pages/Explore';
 import UserProfile from './pages/UserProfile';
 import Plan from './pages/Plan';
+import PlanManagement from './pages/PlanManagement';
 import RouteChangeTracker from './components/RouteChangeTracker';
 
 function AppRouter() {
@@ -14,6 +15,7 @@ function AppRouter() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/plan/:id" component={Plan} />
+        <Route path="/planmanagement/:id" component={PlanManagement} />
         <Route path="/explore" exact component={Explore} />
         <Route path="/:nickname" component={UserProfile} />
       </Switch>
