@@ -115,6 +115,13 @@ function Plan() {
     return months[date.getMonth()];
   }
 
+  const openInGoogleMaps = (address) => {
+    if (!address) return;
+
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(googleMapsUrl, '_blank');
+  };
+
   return (
     <div>
       <Header />
@@ -206,7 +213,7 @@ function Plan() {
                         <div className='plan-stop-name'>
                           {stop.name && stop.name !== '' ? stop.name : 'Address'} 
                         </div>
-                        <div className='plan-stop-address'>
+                        <div className='plan-stop-address' onClick={() => openInGoogleMaps(stop.full_address && stop.full_address !== '' ? stop.full_address : stop.manual_address)}>
                           {stop.full_address && stop.full_address !== '' ? stop.full_address : stop.manual_address} 
                         </div>
                       </div>
