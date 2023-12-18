@@ -162,7 +162,7 @@ function Plan() {
             <div className='plan-row'>
               <div className='col-4'>
                 <div className='plan-image-container'>
-                  {id==69 ? (
+                  {id===69 ? (
                     <img src="../../images/69plancover.jpeg" className="img-fluid plan-image" alt="Plan Image" />
                   ): (
                     <img src="../../images/you_invited.webp" className="img-fluid plan-image" alt="Plan Image" />
@@ -174,6 +174,7 @@ function Plan() {
                   {planData[0]?.title}
                 </div>
                 <div className='plan-date'>
+                {planData[0]?.date_event && 
                   <div className='plan-date-small'>
                     <div className='plan-date-small-month'>
                       {getMonth(planData[0]?.date_event)}
@@ -182,9 +183,12 @@ function Plan() {
                       {getDay(planData[0]?.date_event)}
                     </div>
                   </div>
-                  <div className='plan-date-normal'>
-                    {formatDate(planDataStops[0]?.time)}
-                  </div>
+                }
+                  {planDataStops[0]?.time && 
+                    <div className='plan-date-normal'>
+                      {formatDate(planDataStops[0]?.time)}
+                    </div>
+                  }
                 </div>
                 <div className='plan-call-to-action'>
                   <div className='plan-p2'>
