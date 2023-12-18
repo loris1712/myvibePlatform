@@ -1,0 +1,116 @@
+.title span{
+    background: #06f;
+    background: linear-gradient(90deg,#19fab8,#1495d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;    
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #fff;
+    margin-top: 1rem;
+}
+  
+
+/*Desktop*/
+@media (min-width: 1025px) {
+
+    .first-section{
+        width: 100%;        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .home-section{
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 3rem;
+    }
+
+    .first-section-left{
+        padding-bottom: 12rem;
+        padding-top: 16rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: #0000007e;
+    }
+
+    .title h1{
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 90%;
+        color: #fff;
+    }
+    
+    .title h3{
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 90%;
+        color: #fff;
+    }
+
+    .description{
+        color: #dadada;
+        width: 90%;
+        line-height: 130%;
+        margin-top: 1rem;
+        font-size: 16px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+    .first-section{
+       width: 100%;
+       background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .home-section{
+        width: 100%;
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        --bs-gutter-x: 0rem !important;
+    }
+
+    .first-section-left{
+        padding-bottom: 8rem !important;
+        padding-top: 9rem !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #0000007e;
+    }
+
+    .title h1{
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 100%;
+        color: #fff;
+    }
+
+    .title h3{
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 90%;
+        color: #fff;
+    }
+
+    .description{
+        color: #dadada;
+        width: 90%;
+        line-height: 130%;
+        margin-top: 1rem;
+        font-size: 14px;
+    }
+
+}

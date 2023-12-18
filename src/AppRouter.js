@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
+import Privacy from './pages/Privacy';
 import Explore from './pages/Explore';
 import UserProfile from './pages/UserProfile';
 import Plan from './pages/Plan';
@@ -14,6 +15,7 @@ function AppRouter() {
       <RouteChangeTracker />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/privacy" exact component={Privacy} />
         <Route path="/plan/:id" component={Plan} />
         <Route path="/planmanagement/:id" component={PlanManagement} />
         <Route path="/explore" exact component={Explore} />
