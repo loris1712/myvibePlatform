@@ -23,7 +23,7 @@ function Footer() {
             <div className='footer-copyright'>
               <p>© 2023 MyVibe, Inc</p>
               <a href='#' className=''>Terms</a>
-              <a href='#' className=''>Privacy</a>
+              <a href='/privacy' className=''>Privacy</a>
             </div>
 
             <div className='footer-social'>
