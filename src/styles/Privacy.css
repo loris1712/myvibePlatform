@@ -11,8 +11,8 @@ h3{
     font-size: 28px;
     font-weight: 600;
     line-height: 100%;
-    color: #fff;
-    margin-top: 1rem;
+    color: #fff !important;
+    margin-top: 1rem !important;
 }
   
 
