@@ -49,6 +49,9 @@ function Explore() {
     'Seattle': { lat: 47.6062, lng: -122.3321 },
     'Miami': { lat: 25.7617, lng: -80.1918 },
     'Chicago': { lat: 41.8781, lng: -87.6298 },
+    'Washington': { lat: 38.9072, lng: -77.0369},
+    'Bologna': { lat: 44.4949, lng: 11.3426},
+    'Mexico City': { lat: 19.432608, lng: -99.133209},
   };
 
   let position = [];
