@@ -39,7 +39,7 @@ function PlanManagement() {
   };
   
   const handleDelete = async (email) => {
-    fetch('https://myvibe-backend.vercel.app/api/deleteParticipant', {
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/deleteParticipant', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ function PlanManagement() {
       setShowPopup(false);
       setSuccessPopup(true);
       setShowDeleteButton(false);
-        fetch('https://myvibe-backend.vercel.app/api/getFullPlanDetails?idPlan=' + id)
+        fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/getFullPlanDetails?idPlan=' + id)
         .then(response => response.json())
         .then(data => {
           setPlanDataParticipants(data.participants);
@@ -74,7 +74,7 @@ function PlanManagement() {
   };
 
   const handleUnlock = async (email) => {
-    fetch('https://myvibe-backend.vercel.app/api/unlockPlan', {
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/unlockPlan', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ function PlanManagement() {
   }, []);
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/getFullPlanDetails?idPlan=' + id)
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/getFullPlanDetails?idPlan=' + id)
       .then(response => response.json())
       .then(data => {
         setPlanData(data.plan);

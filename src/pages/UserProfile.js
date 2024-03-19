@@ -74,7 +74,7 @@ function UserProfile() {
   });
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/getPlaces?public=true&userId=' + nickname)
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/getPlaces?public=true&userId=' + nickname)
       .then(response => response.json())
       .then(data => {
         if(data.length > 0){
@@ -85,7 +85,7 @@ function UserProfile() {
         console.error('Error calling API:', error);
       });
 
-      fetch('https://myvibe-backend.vercel.app/users/user?uid=' + nickname)
+      fetch('https://app-srv-2sljsps3pa-uc.a.run.app/users/user?uid=' + nickname)
       .then(response => response.json())
       .then(data => {
         if(data.length > 0){

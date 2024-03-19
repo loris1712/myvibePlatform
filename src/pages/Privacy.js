@@ -33,7 +33,7 @@ function Privacy() {
   }, []);
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/cities')
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/cities')
       .then(response => response.json())
       .then(data => {
         setOptions(data);

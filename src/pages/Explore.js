@@ -81,7 +81,7 @@ function Explore() {
   });
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/allPlaces?cityName='+ city)
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/allPlaces?cityName='+ city)
       .then(response => response.json())
       .then(data => {
         if(data.length > 0){

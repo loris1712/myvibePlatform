@@ -37,7 +37,7 @@ function Plan() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (emailRegex.test(email)) {
         try {
-          const response = await fetch('https://myvibe-backend.vercel.app/api/acceptPlan', {
+          const response = await fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/acceptPlan', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function Plan() {
   };  
 
   useEffect(() => {
-    fetch('https://myvibe-backend.vercel.app/api/getPlan?idPlan=' + id)
+    fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/getPlan?idPlan=' + id)
       .then(response => response.json())
       .then(data => {
         setPlanData(data);
@@ -79,7 +79,7 @@ function Plan() {
         console.error('Error calling API:', error);
       });
 
-      fetch('https://myvibe-backend.vercel.app/api/getPlanStops?idPlan=' + id)
+      fetch('https://app-srv-2sljsps3pa-uc.a.run.app/api/getPlanStops?idPlan=' + id)
       .then(response => response.json())
       .then(data => {
         setPlanDataStops(data);
